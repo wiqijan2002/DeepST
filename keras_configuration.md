@@ -28,3 +28,17 @@ In our experiment, we mainly tested on `Keras 1.2` and `Theano`. If you use Kera
 
 1. [ValueError: Only layers of same output shape can be merged using sum mode](https://github.com/lucktroy/DeepST/issues/1)
 2. [Only layers of same output shape can be merged using sum mode. Layer shapes: [(None, 6, 32, 2), (None, 2, 32, 2), (None, 2, 32, 2)]](https://github.com/lucktroy/DeepST/issues/6)
+
+
+
+Commands for execution
+For Windows (In my case Windows 10)
+Open Anaconda Prompt
+set "KERAS_BACKEND=theano"
+source activate py27
+cd C:\keras
+cd C:\deep\deep1\scripts\papers\AAAI17\BikeNYC (depends where you keep your files)
+set THEANO_FLAGS="device=cuda*, floatX=float32"
+set "MKL_THREADING_LAYER=GNU"
+set DATAPATH=C:\deep\deep1\data\ (depends where you keep your files)
+python exptBikeNYC.py 
